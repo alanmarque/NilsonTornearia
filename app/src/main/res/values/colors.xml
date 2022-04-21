@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="amarelo">#FF9800</color>
     <color name="cinza_azulado">#4F5B80</color>
+    <color name="cinza_claro">#7A808F</color>
+    <color name="vermelho">#FF1100</color>
 
 </resources>

@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:text="NILSON TORNEARIA"
         android:textSize="20sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/actionMenuView2"
         app:layout_constraintStart_toStartOf="parent"

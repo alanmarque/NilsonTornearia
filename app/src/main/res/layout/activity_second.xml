@@ -42,6 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Telefone" />
+
     <EditText
         android:id="@+id/telefone"
         android:layout_width="match_parent"
@@ -55,18 +56,17 @@
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tipo de Serviço" />
+        android:text="Tipos de Matéria-Prima" />
 
-    <CheckBox android:id="@+id/checkbox_meat"
+    <CheckBox android:id="@+id/checkbox_aco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="serviços"
-        android:onClick="onCheckboxClicked"/>
-    <CheckBox android:id="@+id/checkbox_cheese"
+        android:text="Aço"/>
+
+    <CheckBox android:id="@+id/checkbox_ferro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Produtos"
-        android:onClick="onCheckboxClicked"/>
+        android:text="Ferro"/>
 
     <Button
         android:layout_width="wrap_content"

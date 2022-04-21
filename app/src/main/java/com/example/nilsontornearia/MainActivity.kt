@@ -12,18 +12,12 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener{
             openNextActivity()
-
-
         }
-
-
     }
 
     private fun openNextActivity(){
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
-
-
     }
 
 }

@@ -56,28 +56,29 @@
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tipos de Matéria-Prima" />
+        android:text="Endereço" />
 
-    <CheckBox android:id="@+id/checkbox_aco"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/endereco"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aço"/>
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:text="" />
 
-    <CheckBox android:id="@+id/checkbox_ferro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ferro"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enviar" />
 
     <Button
         android:id="@+id/btnVoltar"
+        android:layout_marginTop="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Voltar"
-        android:onClick="onClickEnviar"/>
+        android:onClick="onClickEnviar"
+        android:text="Voltar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_height="wrap_content"
+        android:text="Continuar" />
 
 </LinearLayout>

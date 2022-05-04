@@ -14,20 +14,18 @@
         android:layout_height="match_parent"
         android:background="@drawable/ic_baseline_menu_24"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <TextView
-        android:layout_width="274dp"
-        android:layout_height="wrap_content"
-        android:text="NILSON TORNEARIA"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/actionMenuView2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="16dp">
 
-
+        <TextView
+            android:id="@+id/botao_lateral"
+            android:layout_width="125dp"
+            android:layout_height="6dp"
+            android:text="NILSON TORNEARIA"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.ActionMenuView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/toolbar"
-    android:background="@color/cinza_azulado">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <androidx.appcompat.widget.ActionMenuView
-        android:id="@+id/actionMenuView2"
-        android:layout_width="45dp"
-        android:layout_height="match_parent"
-        android:background="@drawable/ic_baseline_menu_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp">
-
-        <TextView
-            android:id="@+id/botao_lateral"
-            android:layout_width="125dp"
-            android:layout_height="6dp"
-            android:text="NILSON TORNEARIA"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-    </androidx.appcompat.widget.ActionMenuView>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-
+</androidx.appcompat.widget.Toolbar>

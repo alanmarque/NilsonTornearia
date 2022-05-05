@@ -12,33 +12,18 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_second.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class AboutActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
-        btnVoltar.setOnClickListener{
-            openNextActivity()
-        }
+        setContentView(R.layout.activity_about)
 
-        // configuração do menu lateral
-        configuraMenuLateral()
-    }
-
-    private fun configuraMenuLateral() {
-        // ícone de menu (hamburger) para mostrar o menu
-        var toogle = ActionBarDrawerToggle(this, layoutMenuLateral, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-
-        layoutMenuLateral.addDrawerListener(toogle)
-        toogle.syncState()
-
-        menu_lateral.setNavigationItemSelectedListener(this)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> {
-                openNextActivity()
+                openHomeActivity()
                 Toast.makeText(this, "Clicou Página inicial", Toast.LENGTH_SHORT).show()
             }
 
@@ -48,7 +33,8 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
             R.id.nav_about -> {
                 openAboutActivity()
-                Toast.makeText(this, "Clicou Sobre", Toast.LENGTH_SHORT).show() }
+                Toast.makeText(this, "Clicou Sobre", Toast.LENGTH_SHORT).show()
+            }
         }
 
         // fecha menu depois de tratar o evento
@@ -56,13 +42,13 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         return true
     }
 
-    private fun openNextActivity(){
-        val intent = Intent(this, MainActivity::class.java)
+    private fun openHomeActivity(){
+        val intent = Intent(this, SecondActivity::class.java)
         super.onBackPressed()
     }
 
     private fun openAboutActivity(){
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, AboutActivity::class.java)
         super.onBackPressed()
     }
 }

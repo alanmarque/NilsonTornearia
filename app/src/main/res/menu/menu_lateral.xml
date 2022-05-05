@@ -2,25 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_diciplinas"
-            android:icon="@drawable/ic_disciplina_black"
-            android:title="Disciplinas"
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Início"
             android:checked="true"/>
         <item
-            android:id="@+id/nav_forum"
+            android:id="@+id/nav_faq"
             android:icon="@drawable/ic_forum_black"
-            android:title="Fórum" />
+            android:title="FAQ" />
+
         <item
-            android:id="@+id/nav_mensagens"
-            android:icon="@drawable/ic_chat_black"
-            android:title="Mensagens" />
-        <item
-            android:id="@+id/nav_localizacao"
-            android:icon="@drawable/ic_chat_black"
-            android:title="Localização" />
-        <item
-            android:id="@+id/nav_config"
-            android:icon="@drawable/ic_configuracoes_black"
-            android:title="Configurações" />
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_baseline_help_24"
+            android:title="Sobre" />
     </group>
 </menu>

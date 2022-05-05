@@ -62,7 +62,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     }
 
     private fun openAboutActivity(){
-        val intent = Intent(this, MainActivity::class.java)
-        super.onBackPressed()
+        val intent = Intent(this, activity_about::class.java)
+        startActivity(intent)
     }
 }

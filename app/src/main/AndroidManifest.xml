@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NilsonTornearia">
         <activity
+            android:name=".activity_about"
+            android:exported="false" />
+        <activity
             android:name=".SecondActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Início"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/ic_forum_black"
+            android:title="FAQ" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_baseline_help_24"
+            android:title="Sobre" />
+    </group>
+</menu>

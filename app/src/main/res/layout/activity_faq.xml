@@ -13,14 +13,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutActivity">
+    tools:context=".FaqActivity">
 
 
     <include layout="@layout/toolbar" />
 
     <TextView
         android:id="@+id/tvDescription"
-        android:text="  A empresa surgiu nos anos 90 em Osasco e primeiramente era conhecida como Lucas Tornearia, depois de uns anos e parcerias que não deram certo, foi trocado o nome e a localidade. Hoje conhecida como Nilson Tornearia e em Barueri, a empresa tem uma média de mais de 100 clientes e algumas parcerias essenciais para a terceirização de serviços como a solda mais pesada de alguns materiais, lembrando que a tornearia é controlada por um homem só, a tornearia da conta de cerca de 50 a 80 demandas por mês."
+        android:text="FAQ"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:textColor="@color/black"

@@ -12,14 +12,14 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_second.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class AboutActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class FaqActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about)
+        setContentView(R.layout.activity_faq)
         // configuração do menu lateral
         configuraMenuLateral()
-        menu_lateral.menu.findItem(R.id.nav_about).isChecked = true
+        menu_lateral.menu.findItem(R.id.nav_faq).isChecked = true
     }
 
     private fun configuraMenuLateral() {
@@ -49,8 +49,8 @@ class AboutActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
                 Toast.makeText(this, "Clicou Sobre", Toast.LENGTH_SHORT).show() }
 
             R.id.nav_map -> {
-            openMapActivity()
-            Toast.makeText(this, "Clicou Localização", Toast.LENGTH_SHORT).show() }
+                openMapActivity()
+                Toast.makeText(this, "Clicou Localização", Toast.LENGTH_SHORT).show() }
         }
 
         // fecha menu depois de tratar o evento

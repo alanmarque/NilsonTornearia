@@ -23,6 +23,8 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         // configuração do menu lateral
         configuraMenuLateral()
+        menu_lateral.menu.findItem(R.id.nav_home).isChecked = true
+
     }
 
     private fun configuraMenuLateral() {
@@ -43,12 +45,17 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             }
 
             R.id.nav_faq -> {
+                openFaqActivity()
                 Toast.makeText(this, "Clicou Faq", Toast.LENGTH_SHORT).show()
             }
 
             R.id.nav_about -> {
                 openAboutActivity()
                 Toast.makeText(this, "Clicou Sobre", Toast.LENGTH_SHORT).show() }
+
+            R.id.nav_map -> {
+                openMapActivity()
+                Toast.makeText(this, "Clicou Localização", Toast.LENGTH_SHORT).show() }
         }
 
         // fecha menu depois de tratar o evento
@@ -58,11 +65,20 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     private fun openNextActivity(){
         val intent = Intent(this, MainActivity::class.java)
-        super.onBackPressed()
+        startActivity(intent)
     }
 
     private fun openAboutActivity(){
-        val intent = Intent(this, activity_about::class.java)
+        val intent = Intent(this, AboutActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openFaqActivity(){
+        val intent = Intent(this, FaqActivity::class.java)
+        startActivity(intent)
+    }
+    private fun openMapActivity(){
+        val intent = Intent(this, MapActivity::class.java)
         startActivity(intent)
     }
 }

@@ -12,22 +12,14 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_second.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class AboutActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
-        btnVoltar.setOnClickListener{
-            openNextActivity()
-        }
-        continuar.setOnClickListener{
-            openPedidosActivity()
-        }
-
+        setContentView(R.layout.activity_about)
         // configuração do menu lateral
         configuraMenuLateral()
-        menu_lateral.menu.findItem(R.id.nav_home).isChecked = true
-
+        menu_lateral.menu.findItem(R.id.nav_about).isChecked = true
     }
 
     private fun configuraMenuLateral() {
@@ -57,8 +49,8 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 Toast.makeText(this, "Clicou Sobre", Toast.LENGTH_SHORT).show() }
 
             R.id.nav_map -> {
-                openMapActivity()
-                Toast.makeText(this, "Clicou Localização", Toast.LENGTH_SHORT).show() }
+            openMapActivity()
+            Toast.makeText(this, "Clicou Localização", Toast.LENGTH_SHORT).show() }
         }
 
         // fecha menu depois de tratar o evento
@@ -80,12 +72,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         val intent = Intent(this, FaqActivity::class.java)
         startActivity(intent)
     }
+
     private fun openMapActivity(){
         val intent = Intent(this, MapActivity::class.java)
         startActivity(intent)
     }
-    private fun openPedidosActivity(){
-        val intent = Intent(this, activity_pedido::class.java)
-        startActivity(intent)
-    }
+
 }

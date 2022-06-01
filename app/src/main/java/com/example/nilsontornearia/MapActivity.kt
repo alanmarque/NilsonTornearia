@@ -7,28 +7,53 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_second.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MapActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    private val places = arrayListOf(
+        Place("Google", LatLng(-23.5868031, -46.6843406), "Av Brg Faria Lima, 3477 - 18° Andar - Itaim Bibi, São Paulo - Sp", 4.8f)
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
-        btnVoltar.setOnClickListener{
-            openNextActivity()
-        }
-        continuar.setOnClickListener{
-            openPedidosActivity()
-        }
-
+        setContentView(R.layout.activity_map)
         // configuração do menu lateral
         configuraMenuLateral()
-        menu_lateral.menu.findItem(R.id.nav_home).isChecked = true
+        menu_lateral.menu.findItem(R.id.nav_map).isChecked = true
 
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment
+        mapFragment.getMapAsync { googleMap ->
+            addMarkers(googleMap)
+        }
     }
+
+    private fun addMarkers(googleMap: GoogleMap) {
+        places.forEach { place ->
+            googleMap.addMarker(
+                MarkerOptions()
+                    .title(place.name)
+                    .snippet(place.address)
+                    .position(place.latLng)
+            )
+
+        }
+    }
+
+    data class Place(
+        val name: String,
+        val latLng: LatLng,
+        val address: String,
+        val rating: Float
+
+    )
 
     private fun configuraMenuLateral() {
         // ícone de menu (hamburger) para mostrar o menu
@@ -61,6 +86,8 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 Toast.makeText(this, "Clicou Localização", Toast.LENGTH_SHORT).show() }
         }
 
+
+
         // fecha menu depois de tratar o evento
         layoutMenuLateral.closeDrawer(GravityCompat.START)
         return true
@@ -80,12 +107,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         val intent = Intent(this, FaqActivity::class.java)
         startActivity(intent)
     }
+
     private fun openMapActivity(){
         val intent = Intent(this, MapActivity::class.java)
         startActivity(intent)
     }
-    private fun openPedidosActivity(){
-        val intent = Intent(this, activity_pedido::class.java)
-        startActivity(intent)
-    }
+
 }

@@ -10,8 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NilsonTornearia">
         <activity
+            android:name=".activity_pedido"
+            android:exported="false" />
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+        <activity
             android:name=".SecondActivity"
             android:exported="false" />
+        <activity
+            android:name=".FaqActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

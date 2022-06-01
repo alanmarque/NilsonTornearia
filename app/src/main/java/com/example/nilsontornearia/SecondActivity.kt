@@ -20,6 +20,9 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         btnVoltar.setOnClickListener{
             openNextActivity()
         }
+        continuar.setOnClickListener{
+            openPedidosActivity()
+        }
 
         // configuração do menu lateral
         configuraMenuLateral()
@@ -79,6 +82,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     }
     private fun openMapActivity(){
         val intent = Intent(this, MapActivity::class.java)
+        startActivity(intent)
+    }
+    private fun openPedidosActivity(){
+        val intent = Intent(this, activity_pedido::class.java)
         startActivity(intent)
     }
 }
